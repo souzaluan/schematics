@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "SchematicsNestCrud",
+  "title": "CRUD Options Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the CRUD.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use for this CRUD (plural, e.g., \"users\")?"
+    },
+    "spec": {
+      "type": "boolean",
+      "default": true,
+      "description": "Specifies if specs file are generated."
+    }
+  },
+  "required": ["name"]
+}
